@@ -1,2 +1,2 @@
-# Project Masonry Portfolio
+# Masonry Portfolio
 
