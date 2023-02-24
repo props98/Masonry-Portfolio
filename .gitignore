@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.vscode
+Thumgs.db
+
+*.ai
+*.log
+*.pdf
+*.psd
+
+node_modules/
