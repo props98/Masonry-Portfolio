@@ -18,7 +18,7 @@ module.exports = {
   },
   entry: ['@babel/polyfill', path.resolve(__dirname, 'source', 'index.js')],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     clean: true,
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext]'
@@ -29,8 +29,12 @@ module.exports = {
       template: path.resolve(__dirname, 'source', 'index.html')
     }),
     new HtmlWebpackPlugin({
-      filename: 'page.html',
-      template: path.resolve(__dirname, 'source', 'page.html')
+      filename: 'page-1.html',
+      template: path.resolve(__dirname, 'source', 'page-1.html')
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'page-2.html',
+      template: path.resolve(__dirname, 'source', 'page-2.html')
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
@@ -38,9 +42,29 @@ module.exports = {
   ],
   module: {
     rules: [
+      // {
+      //   test: /\.html$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //       }
+      //     },
+      //   ],
+      //   exclude: path.resolve(__dirname, 'source', 'index.html')
+      // },
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        use: {
+          loader: 'html-loader',
+          options: {
+            minimize: {
+              removeComments: true,
+              collapseWhitespace: true,
+            }
+          }
+        }
       },
       {
         test: /\.(c|sa|sc)ss$/i,
@@ -105,7 +129,7 @@ module.exports = {
             ]
           }
         }
-      }
+      },
     ]
   }
 }

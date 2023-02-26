@@ -2,8 +2,16 @@ body {
   background: $background;
   color: $textColor;
   user-select: none;
-  display: grid;
   font-family: "Noah-Medium", "Arial", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.images {
+  display: flex;
 }
 
 .image {

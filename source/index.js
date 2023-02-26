@@ -1,5 +1,9 @@
 import '@babel/polyfill';
+
 import './index.html';
+// import './page-1.html';
+// import './page-2.html';
+
 import './index.scss';
 
 // import code from './img/test.jpeg';
