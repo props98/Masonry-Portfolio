@@ -16,7 +16,7 @@ module.exports = {
     port: 3000,
     open: true
   },
-  entry: ['@babel/polyfill', path.resolve(__dirname, 'source', 'index.js')],
+  entry: ['@babel/polyfill', path.resolve(__dirname, 'source/js', 'index.js')],
   output: {
     path: path.resolve(__dirname, 'build'),
     clean: true,
@@ -28,14 +28,14 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'source', 'index.html')
     }),
-    new HtmlWebpackPlugin({
-      filename: 'page-1.html',
-      template: path.resolve(__dirname, 'source', 'page-1.html')
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'page-2.html',
-      template: path.resolve(__dirname, 'source', 'page-2.html')
-    }),
+    // new HtmlWebpackPlugin({
+    //   filename: 'page-1.html',
+    //   template: path.resolve(__dirname, 'source', 'page-1.html')
+    // }),
+    // new HtmlWebpackPlugin({
+    //   filename: 'page-2.html',
+    //   template: path.resolve(__dirname, 'source', 'page-2.html')
+    // }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     })
@@ -80,7 +80,7 @@ module.exports = {
             }
           },
           "sass-loader"
-        ],
+        ]
       },
       {
         test: /\.woff2?$/i,
