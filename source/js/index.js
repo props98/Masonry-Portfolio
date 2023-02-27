@@ -40,6 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
     generateMasonry(4, createPosts(imageIndex));
   }
 
+  //TODO: Доделать адаптивность на мобильном устройстве
+  //TODO: Сделать модуль для отрисовки постов на странице
+
 })
 
 
