@@ -13,8 +13,6 @@ const createPosts = (imageIndex) => {
     'https://dr.savee-cdn.com/things/6/3/dd1da37a5b2bf7365b5e75.webp'
   ];
 
-  imageIndex = 0;
-
   for (let i = 1; i <= 16; i++) {
     let item = {
       id: i,
