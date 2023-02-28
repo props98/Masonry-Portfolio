@@ -1,0 +1,23 @@
+.header-menu {
+  grid-column: 3 / 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  @include reset;
+}
+
+.header-menu__item {
+  list-style: none;
+}
+
+.header-menu__link {
+  padding: 0 5px;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 37px;
+  transition: .5s;
+
+  &:hover {
+    color: $textColorRed;
+  }
+}

@@ -1,10 +1,13 @@
 @import '../libs/normalize.css';
+@import '../libs/visually-hidden.css';
 
 @import 'global/fonts';
 @import 'global/var';
+@import 'global/mixins';
 
 @import 'layout/style';
 @import 'layout/main-page';
 @import 'layout/header';
+@import 'layout/header-menu';
 @import 'layout/works';
 @import 'layout/work';

@@ -1,13 +1,14 @@
 * {
-  color: $textColor;
+  color: $textColorWhite;
   box-sizing: border-box;
 }
 
 html,
 body {
-  overflow: hidden;
+  // overflow: hidden;
   background: $background;
-  font-family: "Noah-Medium", "Arial", sans-serif;
+  font-family: "Noah", "Arial", sans-serif;
+  font-size: 14px;
 }
 
 img {
@@ -16,3 +17,6 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}

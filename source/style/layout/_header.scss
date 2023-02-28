@@ -1,11 +1,35 @@
-.header {
+.header__wrapper {
   position: fixed;
   width: 100%;
-  height: 100px;
-  // background: tomato;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0 10px;
   align-items: center;
-  padding: 0 2vw;
-  z-index: 10;
+  padding: 30px 2vw;
+  z-index: 99;
   mix-blend-mode: difference;
 }
+
+.header__logo-wrapper {
+  padding: 0 5px;
+}
+
+.header__logo {
+  display: block;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 40px;
+  user-select: none;
+}
+
+.header__title {
+  @include reset;
+  font-weight: 900;
+}
+
+.header__link-down {
+  display: block;
+  padding: 0 5px;
+  justify-self: flex-end;
+}
+

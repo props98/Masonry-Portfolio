@@ -16,7 +16,7 @@ const createAdaptive = () => {
       (previousScreenSize < 600 || previousScreenSize >= 900)) {
       generateMasonry(2, posts);
     } else if (window.innerWidth >= 900 && previousScreenSize < 900) {
-      generateMasonry(4, posts);
+      generateMasonry(5, posts);
     }
     previousScreenSize = window.innerWidth;
 
@@ -28,7 +28,7 @@ const createAdaptive = () => {
   } else if (previousScreenSize >= 600 && previousScreenSize < 900) {
     generateMasonry(2, posts);
   } else {
-    generateMasonry(4, posts);
+    generateMasonry(5, posts);
   }
 
 }

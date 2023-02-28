@@ -2,37 +2,38 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  // height: 300px;
-  // background: tomato;
   border-radius: 5px;
-
-  &__title {
-    margin: 0;
-    padding: 0;
-  }
-
-  &__desc {
-    position: relative;
-    text-align: center;
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #161616;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: .3s;
-  }
 
   &:hover .work__overlay {
     opacity: .8;
-  cursor: pointer;
+    cursor: pointer;
   }
 }
+
+.work__title {
+  margin: 0;
+  padding: 0;
+}
+
+.work__desc {
+  position: relative;
+  text-align: center;
+}
+
+.work__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #161616;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: .3s;
+}
+
+
+
