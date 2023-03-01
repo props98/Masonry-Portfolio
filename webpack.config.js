@@ -1,10 +1,10 @@
-const path = require('path');
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
 // Plugins
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -31,10 +31,6 @@ module.exports = {
     // new HtmlWebpackPlugin({
     //   filename: 'page-1.html',
     //   template: path.resolve(__dirname, 'source', 'page-1.html')
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: 'page-2.html',
-    //   template: path.resolve(__dirname, 'source', 'page-2.html')
     // }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
