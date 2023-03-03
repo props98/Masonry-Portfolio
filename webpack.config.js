@@ -38,18 +38,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.html$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[name].[ext]',
-      //       }
-      //     },
-      //   ],
-      //   exclude: path.resolve(__dirname, 'source', 'index.html')
-      // },
       {
         test: /\.html$/i,
         use: {
@@ -65,8 +53,8 @@ module.exports = {
       {
         test: /\.(c|sa|sc)ss$/i,
         use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: {
@@ -75,7 +63,8 @@ module.exports = {
               }
             }
           },
-          "sass-loader"
+          'remove-comments-loader',
+          'sass-loader'
         ]
       },
       {
