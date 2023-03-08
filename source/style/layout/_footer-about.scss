@@ -1,0 +1,26 @@
+.footer-about {
+  grid-column: 2 / 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.footer-about__wrapper {
+  max-width: 270px;
+}
+
+.footer-about__title {
+  margin: 0;
+  margin-bottom: 26px;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.footer-about__desc {
+  margin: 0;
+
+  &--without-title {
+    padding-top: 56px;
+  }
+}
