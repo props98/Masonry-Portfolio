@@ -9,3 +9,4 @@ Thumgs.db
 *.psd
 
 node_modules/
+build/

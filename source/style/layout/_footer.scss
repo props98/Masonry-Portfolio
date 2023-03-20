@@ -1,0 +1,6 @@
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  padding: 75px 2vw 30px;
+}
