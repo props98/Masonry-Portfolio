@@ -8,10 +8,6 @@
     opacity: .8;
     cursor: pointer;
   }
-
-  @media (max-width: $mobileWidth) {
-    min-width: 300px;
-  }
 }
 
 .work__title {

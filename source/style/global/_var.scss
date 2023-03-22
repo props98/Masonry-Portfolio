@@ -1,8 +1,9 @@
 $background: rgb(21, 21, 21);
+$backgroundOpacity_09: rgba(21, 21, 21, 0.9);
+$backgroundOpacity_03: rgba(21, 21, 21, 0.3);
 $textColorWhite: #fff;
 $textColorRed: #FF6161;
 
 // Рзарешение экрана
-$doubleColumnsWidth: 900px;
+$toDesktop: 900px;
 $oneColumnsWidth: 600px;
-$mobileWidth: 550px;
