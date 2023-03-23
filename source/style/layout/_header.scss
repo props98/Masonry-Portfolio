@@ -1,6 +1,6 @@
-// .header {
-//   padding-top: 20px;
-// }
+.header__container {
+  min-width: 320px;
+}
 
 .header__menu-wrapper {
   @media (min-width: $toDesktop) {
@@ -15,19 +15,6 @@
   }
 }
 
-// .header__wrapper {
-//   min-width: 320px;
-//   width: 100%;
-//   display: grid;
-//   display: grid;
-//   align-items: center;
-//   grid-template-columns: repeat(2, 1fr);
-//   grid-gap: 0 10px;
-//   position: fixed;
-//   z-index: 7;
-//   mix-blend-mode: difference;
-// }
-
 .header__logo-wrapper {
   padding: 20px calc(2vw + 5px) 10px;
   position: fixed;
@@ -37,7 +24,8 @@
   mix-blend-mode: difference;
 }
 
-.header__logo {
+.header__logo,
+.header__sublogo {
   display: block;
   font-weight: 900;
   font-size: 45px;
@@ -55,7 +43,7 @@
   position: fixed;
   z-index: 50;
   right: 0;
-  top: 80px;
+  top: 81px;
   padding: 0 calc(2vw + 5px);
   cursor: pointer;
   mix-blend-mode: difference;
