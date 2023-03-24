@@ -1,7 +1,7 @@
 .header-menu {
   @include reset;
 
-  min-width: 30vw;
+  min-width: 263px;
   height: 110vh;
   display: block;
   position: fixed;
@@ -13,13 +13,13 @@
   background: $backgroundOpacity_09;
   transition: ease-out 0.6s;
 
-  // &--close {
-  //   left: -350px;
-  // }
-
   &--open {
     top: 0;
     opacity: 1;
+
+    @media (min-width: $toDesktop) {
+      opacity: 0;
+    }
   }
 
   @media (min-width: $toDesktop) {

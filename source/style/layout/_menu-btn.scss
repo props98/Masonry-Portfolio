@@ -2,7 +2,7 @@ $red: #ff6100;
 $mainFont: 'Candal', sans-serif;
 $anim_time: 0.8s;
 $widthClose: 50px;
-$widhtOpen: 74px;
+$widhtOpen: 67px;
 
 
 //OPEN
@@ -11,7 +11,7 @@ $widhtOpen: 74px;
   10% {transform: translateY(-10px) rotate(0deg); width: $widthClose; }
   50% {transform: translateY(10px) rotate(45deg); width: $widhtOpen; }
   75% {transform: translateY(-20px) rotate(45deg); width: $widhtOpen; }
-  100% {transform: translateY(-15px) rotate(45deg); width: $widhtOpen; }
+  100% {transform: translateY(-5px) rotate(42deg); width: $widhtOpen; }
 }
 
 @keyframes bottomBar_open {
@@ -19,7 +19,7 @@ $widhtOpen: 74px;
   10% { transform: translateY(-10px) rotate(0deg) ; width: $widthClose; }
   60% {transform: translateY(5px) rotate(-45deg); width: $widhtOpen; }
   75% {transform: translateY(-37px) rotate(-45deg); width: $widhtOpen; }
-  100% {transform: translateY(-30px) rotate(-45deg); width: $widhtOpen; }
+  100% {transform: translateY(-21px) rotate(-42deg); width: $widhtOpen; }
 }
 
 @keyframes menuLabel_open {
@@ -68,6 +68,63 @@ $widhtOpen: 74px;
   top: 55px;
   z-index: 99;
 
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 55px;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    background: $backgroundOpacity_06;
+    z-index: -1;
+  }
+
+  &--open .menu-btn__icon {
+    &:before {
+      animation: topBar_open $anim_time ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    &:after {
+      animation: bottomBar_open $anim_time ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &--open .menu-btn__text {
+    animation: menuLabel_open $anim_time ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  &--close .menu-btn__icon {
+    &:before {
+      animation: topBar_close $anim_time ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    &:after {
+      animation: bottomBar_close $anim_time ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &--close .menu-btn__text {
+    animation: menuLabel_close $anim_time ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: $toDesktop) {
+    display: none;
+  }
+}
+
+.menu-btn__icon {
   &:before,
   &:after {
     content: '';
@@ -87,48 +144,6 @@ $widhtOpen: 74px;
     right: 0;
     top: 15px;
     transform-origin: right center;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &--open {
-    &:before {
-      animation: topBar_open $anim_time ease-in-out;
-      animation-fill-mode: forwards;
-    }
-
-    &:after {
-      animation: bottomBar_open $anim_time ease-in-out;
-      animation-fill-mode: forwards;
-    }
-
-    .menu-btn__text {
-      animation: menuLabel_open $anim_time ease-in;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  &--close {
-    &:before {
-      animation: topBar_close $anim_time ease-in-out;
-      animation-fill-mode: forwards;
-    }
-
-    &:after {
-      animation: bottomBar_close $anim_time ease-in-out;
-      animation-fill-mode: forwards;
-    }
-
-    .menu-btn__text {
-      animation: menuLabel_close $anim_time ease-in;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  @media (min-width: $toDesktop) {
-    display: none;
   }
 }
 
