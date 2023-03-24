@@ -12,7 +12,6 @@ const animationBtn = () => {
         menuBtn.classList.remove('menu-btn--close');
         menuBtn.classList.add('menu-btn--open');
       }
-
   });
 }
 

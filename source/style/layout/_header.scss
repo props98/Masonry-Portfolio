@@ -2,19 +2,6 @@
   min-width: 320px;
 }
 
-.header__menu-wrapper {
-  @media (min-width: $toDesktop) {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    padding: 20px 2vw 10px;
-    background: $backgroundOpacity_03;
-    position: fixed;
-    z-index: 50;
-  }
-}
-
 .header__logo-wrapper {
   padding: 20px calc(2vw + 5px) 10px;
   position: fixed;
@@ -38,13 +25,21 @@
   font-weight: 900;
 }
 
+.header__bio-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  margin-left: auto;
+  margin-right: 2vw;
+}
+
 .header__bio {
-  display: block;
+  // display: block;
   position: fixed;
   z-index: 50;
-  right: 0;
+  // right: 0;
   top: 81px;
-  padding: 0 calc(2vw + 5px);
+  // padding: 0 calc(2vw + 5px);
   cursor: pointer;
   mix-blend-mode: difference;
 
