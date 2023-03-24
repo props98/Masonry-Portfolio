@@ -67,6 +67,7 @@
   line-height: 37px;
 
   &:hover {
+    transition: ease-in-out .39s;
     color: $textColorRed;
   }
 
