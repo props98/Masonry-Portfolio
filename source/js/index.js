@@ -4,6 +4,8 @@ import '../index.html';
 // import '../page-1.html';
 
 import '../style/index.scss';
+import animationBtn from './modules/animationBtn';
+import burgerMenu from './modules/burgerMenu';
 
 //* Обработка данных для постов
 // import createPosts from './modules/createPosts';
@@ -16,6 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   createAdaptive();
+  animationBtn();
+  burgerMenu();
 
   //TODO: Доделать адаптивность на мобильном устройстве
 

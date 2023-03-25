@@ -1,20 +1,18 @@
-.header__wrapper {
-  position: fixed;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 0 10px;
-  align-items: center;
-  padding: 30px 2vw;
-  z-index: 99;
-  mix-blend-mode: difference;
+.header__container {
+  min-width: 320px;
 }
 
 .header__logo-wrapper {
-  padding: 0 5px;
+  padding: 20px calc(2vw + 5px) 10px;
+  position: fixed;
+  top: 0;
+  z-index: 77;
+  cursor: pointer;
+  mix-blend-mode: difference;
 }
 
-.header__logo {
+.header__logo,
+.header__sublogo {
   display: block;
   font-weight: 900;
   font-size: 45px;
@@ -27,10 +25,25 @@
   font-weight: 900;
 }
 
-.header__link-down {
-  display: block;
-  padding: 0 5px;
-  justify-self: flex-end;
-  align-self: flex-start;
+.header__bio-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  margin-left: auto;
+  margin-right: 2vw;
 }
 
+.header__bio {
+  // display: block;
+  position: fixed;
+  z-index: 50;
+  // right: 0;
+  top: 81px;
+  // padding: 0 calc(2vw + 5px);
+  cursor: pointer;
+  mix-blend-mode: difference;
+
+  @media (min-width: $toDesktop) {
+    z-index: 77;
+  }
+}

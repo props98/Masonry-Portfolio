@@ -12,30 +12,38 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="visually-hidden">Portfolio MP 2023</h1>
-      <div class="header__wrapper">
+      <div class="header__container">
+        <h1 class="visually-hidden">Portfolio MP 2023</h1>
         <div class="header__logo-wrapper">
           <span class="header__logo">Logo</span>
-          <span class="header__logo">Sublogo</span>
+          <span class="header__sublogo">Sublogo</span>
         </div>
-        <ul class="header-menu">
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Логотипы</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Постеры</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Видео</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Фото-арты</a>
-          </li>
-          <li class="header-menu__item">
-            <a class="header-menu__link" href="#">Веб</a>
-          </li>
-        </ul>
-        <a class="header__link-down" href="#">down</a>
+        <div id="menu-btn" class="menu-btn menu-btn--close">
+          <span class="menu-btn__icon"></span>
+          <span class="menu-btn__text">menu</span>
+        </div>
+        <nav class="header-menu">
+          <ul class="header-menu__list header-menu__list--close">
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Логотипы</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Постеры</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Видео</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Фото-арты</a>
+            </li>
+            <li class="header-menu__item">
+              <a class="header-menu__link" href="#">Веб</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__bio-wrapper">
+          <a class="header__bio" href="#bio">bio</a>
+        </div>
       </div>
     </header>
     <!-- /.header -->
@@ -60,7 +68,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="bio">
       <div class="footer__wrapper">
         <div class="footer-greeting">
           <h2 class="footer-greeting__title">“Добрый день! И на случай, если я вас больше не увижу — доброе утро, добрый вечер и доброй ночи!”</h2>
