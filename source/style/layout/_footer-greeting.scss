@@ -1,13 +1,33 @@
+.footer-greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $toDesktop) {
+    justify-content: flex-start;
+  }
+}
+
 .footer-greeting__photo {
-  width: 305px;
-  height: 306px;
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 
 .footer-greeting__title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   font-weight: 800;
-  font-size: 26px;
-  line-height: 27px;
+  font-size: calc(26px + 12 * (100vw - 320px) / 880);
+  line-height: calc(32px + 12 * (100vw - 320px) / 880);
+
+  @media (min-width: $toTablet) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $toDesktop) {
+    font-size: calc(14px + 12 * (100vw - 320px) / 880);
+    line-height: calc(18px + 12 * (100vw - 320px) / 880);
+  }
 }

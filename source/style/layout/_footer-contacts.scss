@@ -1,14 +1,24 @@
 .footer-contacts {
   display: flex;
   flex-direction: column;
+  padding-top: 35px;
+
+  @media (min-width: $toDesktop) {
+    padding: 0;
+  }
 }
 
 .footer-contacts__title {
   margin: 0;
   margin-bottom: 26px;
   font-weight: 800;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: calc(26px + 12 * (100vw - 320px) / 880);
+  line-height: calc(32px + 12 * (100vw - 320px) / 880);
+
+  @media (min-width: $toDesktop) {
+    font-size: calc(14px + 12 * (100vw - 320px) / 880);
+    line-height: calc(18px + 12 * (100vw - 320px) / 880);
+  }
 }
 
 .footer-contacts__desc {
@@ -23,10 +33,15 @@
 
 .footer-contacts__mail {
   display: block;
-  margin-bottom: 27px;
+  margin: 27px 0;
   font-weight: 800;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: calc(26px + 12 * (100vw - 320px) / 880);
+  line-height: calc(32px + 12 * (100vw - 320px) / 880);
+
+  @media (min-width: $toDesktop) {
+    font-size: calc(14px + 12 * (100vw - 320px) / 880);
+    line-height: calc(18px + 12 * (100vw - 320px) / 880);
+  }
 }
 
 .footer-contacts__copyright-wrapper {
@@ -34,4 +49,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 12px;
+  line-height: 16px;
 }

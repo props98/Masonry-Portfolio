@@ -1,13 +1,30 @@
 .footer-look {
-  max-width: 270px;
+  width: 100%;
+  padding-top: 35px;
+
+  @media (min-width: $toTablet) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-top: 0;
+  }
+
+  @media (min-width: $toDesktop) {
+    grid-column: inherit;
+    grid-row: inherit;
+  }
 }
 
 .footer-look__title {
   margin: 0;
   margin-bottom: 26px;
   font-weight: 800;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: calc(26px + 12 * (100vw - 320px) / 880);
+  line-height: calc(32px + 12 * (100vw - 320px) / 880);
+
+  @media (min-width: $toDesktop) {
+    font-size: calc(14px + 12 * (100vw - 320px) / 880);
+    line-height: calc(18px + 12 * (100vw - 320px) / 880);
+  }
 }
 
 .footer-look__github {

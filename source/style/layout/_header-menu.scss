@@ -71,7 +71,7 @@
     color: $textColorRed;
   }
 
-  @media (min-width: $oneColumnsWidth) {
+  @media (min-width: $toTablet) {
     padding: 10px 3vw;
   }
 
