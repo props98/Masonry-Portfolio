@@ -1,5 +1,5 @@
 * {
-  color: $textColorWhite;
+  color: $ColorWhite;
   box-sizing: border-box;
 }
 
@@ -10,6 +10,7 @@ body {
   font-family: "Noah", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
+  // position: relative;
 
   @media (min-width: $toDesktop) {
     font-size: 14px;
