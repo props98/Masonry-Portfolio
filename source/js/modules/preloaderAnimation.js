@@ -1,20 +1,22 @@
 // import * as THREE from 'three';
+import THREE from "../../libs/three.min";
 
-const preloader = () => {
+const preloaderAnimation = () => {
   var $body = document.body,
   $preloader = document.querySelector(".preloader"),
   areawidth = window.innerWidth,
   areaheight = window.innerHeight,
   canvassize = 500,
-  length = 33,
+  length = 35,
   radius = 7,
-  rotatevalue = 0.05,
+  rotatevalue = 0.09,
   acceleration = 0,
   animatestep = 0,
   toend = false,
   pi2 = Math.PI * 2,
   group = new THREE.Group(),
   changeColor = 0x222222,
+  transparentColor = 0x222222,
   mesh,
   ringcover,
   ring,
@@ -109,7 +111,7 @@ const preloader = () => {
 
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(canvassize, canvassize);
-  renderer.setClearColor(changeColor);
+  renderer.setClearColor(transparentColor);
 
   $preloader.appendChild(renderer.domElement);
 
@@ -166,4 +168,4 @@ const preloader = () => {
   }
 }
 
-export default preloader;
+export default preloaderAnimation;
