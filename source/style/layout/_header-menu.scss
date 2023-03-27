@@ -65,17 +65,50 @@
   font-weight: 800;
   line-height: 37px;
 
-  &:hover {
-    transition: ease-in-out .39s;
-    color: $ColorRed;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    transition: all 0.35s ease-in;
   }
+
+  &::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $ColorRed;
+    max-width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &:hover::after {
+    max-width: 100%;
+  }
+
+  &--current::after {
+    max-width: 100%;
+  }
+
+  // &:hover {
+  //   transition: ease-in-out .39s;
+  //   color: $ColorRed;
+  // }
 
   @media (min-width: $toTablet) {
     padding: 10px 3vw;
+
+
   }
 
   @media (min-width: $toDesktop) {
     padding: 0 5px;
     min-width: 160px;
+
+    &::after {
+      left: 6px;
+    }
   }
 }
