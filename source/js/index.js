@@ -10,7 +10,8 @@ import burgerMenu from './modules/burgerMenu';
 //* Адаптивные элементы на странице
 import createAdaptive from './modules/createAdaptive';
 
-loader();
+// Turn On preloader
+// loader();
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';

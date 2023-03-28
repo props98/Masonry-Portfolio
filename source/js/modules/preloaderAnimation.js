@@ -9,7 +9,7 @@ const preloaderAnimation = () => {
   canvassize = 500,
   length = 35,
   radius = 7,
-  rotatevalue = 0.09,
+  rotatevalue = 0.07,
   acceleration = 0,
   animatestep = 0,
   toend = false,
