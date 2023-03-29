@@ -1,25 +1,25 @@
-.link-underline {
+.link {
+  &:hover .link__underline::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  &:active .link__underline {
+    color: $ColorRed;
+  }
+
+  &:focus .link__underline {
+    color: $ColorRed;
+  }
+
+  &:active .link__underline::before {
+    transform: scaleX(0);
+  }
+}
+
+.link__underline {
   position: relative;
   z-index: 1;
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 0;
-  //   right: 0;
-  //   width: 0;
-  //   height: 2px;
-  //   background: $ColorRed;
-  //   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  // }
-
-  // @media (hover: hover) and (pointer: fine) {
-  //   &:hover::before {
-  //     left: 0;
-  //     right: auto;
-  //     width: 100%;
-  //   }
-  // }
 
   &::before {
     content: "";
@@ -28,13 +28,10 @@
     position: absolute;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.5s ease-in-out;
+    // transition: transform 0.5s ease-in-out;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
     z-index: -1;
   }
-
-  &:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
 }
+
 
