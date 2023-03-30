@@ -133,6 +133,14 @@
     color: $ColorRed;
   }
 
+  &--active {
+    pointer-events: none;
+  }
+
+  &--active .header-menu__replaced-text {
+    color: $ColorRed;
+  }
+
   @media (min-width: $toTablet) {
     padding: 0 3vw;
 

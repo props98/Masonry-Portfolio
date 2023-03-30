@@ -31,7 +31,7 @@ const loader = () => {
 
   setTimeout( () => {
     loaderNow(1);
-  }, 3000);
+  }, 1000);
 
 }
 
