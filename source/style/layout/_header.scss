@@ -34,14 +34,19 @@
 }
 
 .header__bio {
-  // display: block;
   position: fixed;
   z-index: 50;
-  // right: 0;
   top: 81px;
-  // padding: 0 calc(2vw + 5px);
   cursor: pointer;
   mix-blend-mode: difference;
+
+  &:hover {
+    color: $ColorRed;
+  }
+
+  &:focus {
+    color: $ColorRed;
+  }
 
   @media (min-width: $toDesktop) {
     z-index: 77;
