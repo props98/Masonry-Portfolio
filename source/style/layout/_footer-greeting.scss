@@ -11,8 +11,12 @@
 .footer-greeting__photo {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 5px;
+
+  @media (min-width: $toDesktop) {
+    height: auto;
+  }
 }
 
 .footer-greeting__title {
