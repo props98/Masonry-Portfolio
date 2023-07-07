@@ -16,7 +16,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 25px;
     padding: 20px 2vw 10px;
-    background: $backgroundOpacity_03;
+    background: rgba($ColorBlack, .3);
     position: fixed;
     z-index: 50;
   }
@@ -34,7 +34,7 @@
   padding: 130px 0;
   z-index: 77;
   opacity: 0;
-  background: $backgroundOpacity_09;
+  background: rgba($ColorBlack, .9);
   transition: ease-out 0.6s;
 
   @media (min-width: $toDesktop) {

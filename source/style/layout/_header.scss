@@ -1,5 +1,9 @@
 .header__container {
   min-width: 320px;
+
+  &:hover .header-menu {
+    background: $ColorBlack;
+  }
 }
 
 .header__logo-wrapper {
@@ -23,32 +27,4 @@
 .header__title {
   @include reset;
   font-weight: 900;
-}
-
-.header__bio-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 30px;
-  margin-left: auto;
-  margin-right: 2vw;
-}
-
-.header__bio {
-  position: fixed;
-  z-index: 50;
-  top: 30px;
-  cursor: pointer;
-  mix-blend-mode: difference;
-
-  &:hover {
-    color: $ColorRed;
-  }
-
-  &:focus {
-    color: $ColorRed;
-  }
-
-  @media (min-width: $toDesktop) {
-    z-index: 77;
-  }
 }
