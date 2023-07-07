@@ -1,26 +1,54 @@
 .footer-about {
-  grid-column: 2 / 4;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: block;
   grid-gap: 10px;
+  padding-top: 35px;
+
+  @media (min-width: $toTablet) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $toDesktop) {
+    grid-column: 2 / 4;
+    padding: 0;
+  }
 }
 
 .footer-about__wrapper {
-  max-width: 270px;
+  @media (min-width: $toDesktop) {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+  }
+}
+
+.footer-about__column {
+  width: 100%;
+
+  &:not(:nth-child(1)) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: $toDesktop) {
+    &:not(:nth-child(1)) {
+      padding-top: 0;
+    }
+  }
 }
 
 .footer-about__title {
   margin: 0;
   margin-bottom: 26px;
   font-weight: 800;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: calc(26px + 12 * (100vw - 320px) / 880);
+  line-height: calc(32px + 12 * (100vw - 320px) / 880);
+
+  @media (min-width: $toDesktop) {
+    font-size: calc(14px + 12 * (100vw - 320px) / 880);
+    line-height: calc(18px + 12 * (100vw - 320px) / 880);
+  }
 }
 
 .footer-about__desc {
   margin: 0;
-
-  &--without-title {
-    padding-top: 56px;
-  }
 }

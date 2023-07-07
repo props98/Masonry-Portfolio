@@ -23,6 +23,11 @@ module.exports = {
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext]'
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',

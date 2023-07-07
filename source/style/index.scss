@@ -4,14 +4,19 @@
 @import 'global/fonts';
 @import 'global/var';
 @import 'global/mixins';
+@import 'global/preloader';
+@import 'global/link';
 
 @import 'layout/style';
 @import 'layout/main-page';
 @import 'layout/header';
 @import 'layout/menu-btn';
-@import 'layout/header-menu';
+@import 'layout/header-menu-var2';
+@import 'layout/header-bio';
 @import 'layout/works';
 @import 'layout/work';
+
+@import 'layout/modal';
 
 @import 'layout/footer';
 @import 'layout/footer-greeting';

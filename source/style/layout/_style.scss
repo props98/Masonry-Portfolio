@@ -1,14 +1,21 @@
 * {
-  color: $textColorWhite;
+  color: $ColorWhite;
   box-sizing: border-box;
 }
 
 html,
 body {
   // overflow: hidden;
-  background: $background;
+  background: $ColorBlack;
   font-family: "Noah", "Arial", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 20px;
+  // position: relative;
+
+  @media (min-width: $toDesktop) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 img {
@@ -19,4 +26,9 @@ img {
 
 a {
   text-decoration: none;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
 }
